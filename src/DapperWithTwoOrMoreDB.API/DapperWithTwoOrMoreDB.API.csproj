@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DapperWithTwoOrMoreDB.Core\DapperWithTwoOrMoreDB.Core.csproj" />
+    <ProjectReference Include="..\DapperWithTwoOrMoreDB.Data\DapperWithTwoOrMoreDB.Data.csproj" />
+    <ProjectReference Include="..\DapperWithTwoOrMoreDB.Services\DapperWithTwoOrMoreDB.Services.csproj" />
+  </ItemGroup>
+
+</Project>
