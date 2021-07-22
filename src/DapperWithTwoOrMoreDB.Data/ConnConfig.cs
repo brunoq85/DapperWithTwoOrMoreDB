@@ -27,7 +27,8 @@ namespace DapperWithTwoOrMoreDB.Data
               .AddJsonFile("appsettings.json")
               .Build();
 
-            return config.GetSection("connectionStrings")["OracleContext"];
+            return @"TNS_ADMIN=C:\Users\André Azevedo\Oracle\network\admin;USER ID=INTQ;PASSWORD=intq;DATA SOURCE=192.168.0.7:1521/semper";
+           // return config.GetSection("connectionStrings")["OracleContext"];
         }
 
         public static string ObterStringConexaoMySql()

@@ -30,6 +30,8 @@ namespace DapperWithTwoOrMoreDB.Data.Repositories
                     return DatabaseType.SqlServer;
                 else if(_configAPI.DatabaseStorage == "SqLite")
                     return DatabaseType.SqLite;
+                else if (_configAPI.DatabaseStorage == "Oracle")
+                    return DatabaseType.Oracle;
 
                 return DatabaseType.SqlServer;
             }
@@ -38,7 +40,7 @@ namespace DapperWithTwoOrMoreDB.Data.Repositories
         public IEnumerable<Aluno> GetAllAlunos()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("select * from Alunos;");
+            sb.Append("select * from Aluno");
 
             string sql = sb.ToString();
             IDbSession session = DbSession;

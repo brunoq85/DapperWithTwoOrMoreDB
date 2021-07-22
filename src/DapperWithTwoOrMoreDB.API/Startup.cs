@@ -40,9 +40,9 @@ namespace DapperWithTwoOrMoreDB.API
 
             var databaseStorage = databaseStorageSection.GetSection("DatabaseStorage");
 
-            if (databaseStorage.Value == "SqLite")
+            if (databaseStorage.Value == "Oracle")
             {
-                SqlMapper.AddTypeHandler(new MySqlGuidTypeHandler());
+                SqlMapper.AddTypeHandler(new GuidTypeHandler());
                 SqlMapper.RemoveTypeMap(typeof(Guid));
                 SqlMapper.RemoveTypeMap(typeof(Guid?));
             }
